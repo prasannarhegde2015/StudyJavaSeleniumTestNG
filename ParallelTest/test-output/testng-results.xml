@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parallel test runs" duration-ms="20722" started-at="2016-01-24T06:46:38Z" finished-at="2016-01-24T06:46:59Z">
+    <groups>
+    </groups>
+    <test name="T_02" duration-ms="15810" started-at="2016-01-24T06:46:38Z" finished-at="2016-01-24T06:46:54Z">
+      <class name="testNG.Parallel.Test02">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testNG.Parallel.Test02@181ca265]" name="setUp" is-config="true" duration-ms="7077" started-at="2016-01-24T12:16:38Z" finished-at="2016-01-24T12:16:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLink()[pri:0, instance:testNG.Parallel.Test02@181ca265]" name="testLink" duration-ms="8003" started-at="2016-01-24T12:16:45Z" finished-at="2016-01-24T12:16:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLink -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testNG.Parallel.Test02@181ca265]" name="closeBrowser" is-config="true" duration-ms="712" started-at="2016-01-24T12:16:53Z" finished-at="2016-01-24T12:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testNG.Parallel.Test02 -->
+    </test> <!-- T_02 -->
+    <test name="T_01" duration-ms="20722" started-at="2016-01-24T06:46:38Z" finished-at="2016-01-24T06:46:59Z">
+      <class name="testNG.Parallel.Test01">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testNG.Parallel.Test01@71b29017]" name="setUp" is-config="true" duration-ms="13509" started-at="2016-01-24T12:16:38Z" finished-at="2016-01-24T12:16:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLink()[pri:0, instance:testNG.Parallel.Test01@71b29017]" name="testLink" duration-ms="6758" started-at="2016-01-24T12:16:52Z" finished-at="2016-01-24T12:16:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLink -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testNG.Parallel.Test01@71b29017]" name="closeBrowser" is-config="true" duration-ms="437" started-at="2016-01-24T12:16:58Z" finished-at="2016-01-24T12:16:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testNG.Parallel.Test01 -->
+    </test> <!-- T_01 -->
+  </suite> <!-- Parallel test runs -->
+  <suite name="My Test Suite" duration-ms="0" started-at="2016-01-24T06:46:59Z" finished-at="2016-01-24T06:46:59Z">
+    <groups>
+    </groups>
+  </suite> <!-- My Test Suite -->
+</testng-results>

@@ -1,0 +1,3 @@
+ParallelTest.outdir=/test-output
+ParallelTest.useProjectJar=true
+eclipse.preferences.version=1

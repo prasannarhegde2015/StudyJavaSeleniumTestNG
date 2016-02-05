@@ -1,0 +1,9 @@
+GroupName,Iteration,TestCaseID,TransactionType,TestCaseDesription,StartDate,EndDate,Status,Description,Screenshot
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,18-09-2015 23:03,18-09-2015 23:03,PASS,,file:\\\\e:\\log.txt
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,18-09-2015 23:24,18-09-2015 23:25,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,18-09-2015 23:36,18-09-2015 23:36,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,18-09-2015 23:37,18-09-2015 23:37,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,24-10-2015 11:56,24-10-2015 11:57,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,23-11-2015 20:02,23-11-2015 20:03,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,16-12-2015 21:55,16-12-2015 21:55,PASS,,
+Smoke,Cycle1,SC1_TC1,AddHtmlchck,Squash Login page,16-12-2015 21:56,16-12-2015 21:56,PASS,,
