@@ -17,7 +17,7 @@ public class Test02 extends TestBase{
         WebElement textBox = getDriver().findElement(By.name("username"));
         textBox.click();
         textBox.sendKeys("phegde");
-        
+     //   getDriver().findElement(By.name("username"));
          File scrFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
          FileUtils.copyFile(scrFile, new File("c:\\tmp\\screeht1.png"));
         Thread.sleep(2000);

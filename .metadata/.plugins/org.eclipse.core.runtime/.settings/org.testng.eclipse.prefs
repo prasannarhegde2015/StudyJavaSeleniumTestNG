@@ -1,3 +1,5 @@
 ParallelTest.outdir=/test-output
 ParallelTest.useProjectJar=true
+TestGuestBook.outdir=/test-output
+TestGuestBook.useProjectJar=true
 eclipse.preferences.version=1

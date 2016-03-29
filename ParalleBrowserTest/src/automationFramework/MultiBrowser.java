@@ -70,7 +70,7 @@ public class MultiBrowser
 	   
 	   File scrFile;
 		try {
-
+          
 			scrFile = ((TakesScreenshot)drv).getScreenshotAs(OutputType.FILE);
 		} 
 		catch (Exception e){

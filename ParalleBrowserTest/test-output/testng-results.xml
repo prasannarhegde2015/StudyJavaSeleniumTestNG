@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="1" failed="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24389" started-at="2016-02-05T16:19:15Z" finished-at="2016-02-05T16:19:39Z">
+  <suite name="Suite" duration-ms="61096" started-at="2016-02-11T15:26:02Z" finished-at="2016-02-11T15:27:03Z">
     <groups>
     </groups>
-    <test name="IETest" duration-ms="9151" started-at="2016-02-05T16:19:15Z" finished-at="2016-02-05T16:19:24Z">
+    <test name="IETest" duration-ms="34684" started-at="2016-02-11T15:26:02Z" finished-at="2016-02-11T15:26:37Z">
       <class name="automationFramework.MultiBrowser">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@6f5f1a42]" name="beforeTest" is-config="true" duration-ms="3615" started-at="2016-02-05T21:49:15Z" finished-at="2016-02-05T21:49:19Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@4cb51c2d]" name="beforeTest" is-config="true" duration-ms="25005" started-at="2016-02-11T20:56:02Z" finished-at="2016-02-11T20:56:27Z">
           <params>
             <param index="0">
               <value>
@@ -18,31 +18,86 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:automationFramework.MultiBrowser@6f5f1a42]" name="login" duration-ms="3458" started-at="2016-02-05T21:49:19Z" finished-at="2016-02-05T21:49:22Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:automationFramework.MultiBrowser@4cb51c2d]" name="login" duration-ms="5152" started-at="2016-02-11T20:56:27Z" finished-at="2016-02-11T20:56:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="FAIL" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@6f5f1a42]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-02-05T21:49:22Z" finished-at="2016-02-05T21:49:22Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@4cb51c2d]" name="afterTest" is-config="true" duration-ms="4408" started-at="2016-02-11T20:56:32Z" finished-at="2016-02-11T20:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- automationFramework.MultiBrowser -->
+    </test> <!-- IETest -->
+    <test name="FirefoxTest" duration-ms="51780" started-at="2016-02-11T15:26:02Z" finished-at="2016-02-11T15:26:54Z">
+      <class name="automationFramework.MultiBrowser">
+        <test-method status="FAIL" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@e74eb02]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-02-11T20:56:02Z" finished-at="2016-02-11T20:56:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Error communicating with the remote browser. It may have died.
+              <![CDATA[Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+Lab","creator":null,"homepageURL":null},{"locales":["en"],"name":"Kaspersky Protection","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["es-MX"],"name":"Kaspersky Protection","description":"Su protecciÃ³n en Internet con la extensiÃ³n de Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["et"],"name":"Kaspersky Kaitse","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["fi"],"name":"Kaspersky Protection","description":"Suojauksesi InternetissÃ¤ kÃ¤yttÃ¤en Kaspersky Labin laajennusta","creator":null,"homepageURL":null},{"locales":["fr"],"name":"Kaspersky Protection","description":"Votre protection sur Internet avec l\\","creator":null,"homepageURL":null},{"locales":["hu"],"name":"Kaspersky vï¿½delem","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ja"],"name":"ã‚«ã‚¹ãƒšãƒ«ã‚¹ã‚­ãƒ¼ ãƒ—ãƒ©ã‚°ã‚¤ãƒ³","description":"ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ�ãƒƒãƒˆã‚’å®‰å…¨ã�«ä½¿ç”¨ã�™ã‚‹ã�Ÿã‚�ã�® Kaspersky Lab ã�®æ‹¡å¼µæ©Ÿèƒ½","creator":null,"homepageURL":null},{"locales":["mk"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°ÑˆÑ‚Ð¸Ñ‚Ð° Ð½Ð° Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚ Ñ�Ð¾ Ð´Ð¾Ð´Ð°Ñ‚Ð¾Ðº Ð¾Ð´ Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nb"],"name":"Kaspersky Protection","description":"Din beskyttelse pÃ¥ Internett med utvidelsen fra Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nl"],"name":"Kaspersky Bescherming","description":"Uw bescherming op het internet met de extensie van Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["pt-BR"],"name":"ProteÃ§Ã£o Kaspersky","description":"Sua proteÃ§Ã£o na Internet com a extensÃ£o da Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ru"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°Ñ‰Ð¸Ñ‚Ð° Ð² Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚Ðµ Ñ� Ñ€Ð°Ñ�ÑˆÐ¸Ñ€ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚ \\\"Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð¸Ð¸ ÐšÐ°Ñ�Ð¿ÐµÑ€Ñ�ÐºÐ¾Ð³Ð¾\\\"","creator":null,"homepageURL":null},{"locales":["sv"],"name":"Kaspersky Protection","description":"Ditt skydd pÃ¥ internet med tillÃ¤gg frÃ¥n Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["zh-Hans"],"name":"å�¡å·´æ–¯åŸºä¿�æŠ¤","description":"ä½¿ç”¨å�¡å·´æ–¯åŸºå®žéªŒå®¤çš„æ‰©å±•åŠŸèƒ½å¯¹æ‚¨çš„äº’è�”ç½‘çš„ä¿�æŠ¤ã€‚","creator":null,"homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"26.0","maxVersion":"30.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":-2}
+1455204403046	DeferredSave.extensions.json	DEBUG	Save changes
+1455204403046	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1455204403046	addons.xpi-utils	DEBUG	Updating add-on states
+1455204403050	addons.xpi-utils	DEBUG	Writing add-ons list
+1455204403108	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1455204403115	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 8.0.0.9103
+1455204403674	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1455204403675	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1455204403675	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1455204403675	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1455204403676	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1455204403677	addons.manager	DEBUG	Starting provider: GMPProvider
+1455204403718	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1455204403718	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1455204403719	addons.manager	DEBUG	Starting provider: PluginProvider
+1455204403719	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1455204403720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1455204403720	addons.manager	DEBUG	Completed startup sequence
+
 Build info: version: '2.50.1', revision: 'd7fc91b', time: '2016-01-29 19:04:49'
-System info: host: 'PHEGDE', ip: '192.168.0.100', os.name: 'Windows NT (unknown)', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_03'
-Driver info: driver.version: RemoteWebDriver
-Session ID: 99da2169-4a7b-43e2-a97f-a086d7fd4134
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, enablePersistentHover=true, ignoreZoomSetting=false, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:11624/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]]]>
+System info: host: 'PHEGDE', ip: '192.168.0.103', os.name: 'Windows NT (unknown)', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_03'
+Driver info: driver.version: FirefoxDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+Lab","creator":null,"homepageURL":null},{"locales":["en"],"name":"Kaspersky Protection","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["es-MX"],"name":"Kaspersky Protection","description":"Su protecciÃ³n en Internet con la extensiÃ³n de Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["et"],"name":"Kaspersky Kaitse","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["fi"],"name":"Kaspersky Protection","description":"Suojauksesi InternetissÃ¤ kÃ¤yttÃ¤en Kaspersky Labin laajennusta","creator":null,"homepageURL":null},{"locales":["fr"],"name":"Kaspersky Protection","description":"Votre protection sur Internet avec l\\","creator":null,"homepageURL":null},{"locales":["hu"],"name":"Kaspersky vï¿½delem","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ja"],"name":"ã‚«ã‚¹ãƒšãƒ«ã‚¹ã‚­ãƒ¼ ãƒ—ãƒ©ã‚°ã‚¤ãƒ³","description":"ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ�ãƒƒãƒˆã‚’å®‰å…¨ã�«ä½¿ç”¨ã�™ã‚‹ã�Ÿã‚�ã�® Kaspersky Lab ã�®æ‹¡å¼µæ©Ÿèƒ½","creator":null,"homepageURL":null},{"locales":["mk"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°ÑˆÑ‚Ð¸Ñ‚Ð° Ð½Ð° Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚ Ñ�Ð¾ Ð´Ð¾Ð´Ð°Ñ‚Ð¾Ðº Ð¾Ð´ Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nb"],"name":"Kaspersky Protection","description":"Din beskyttelse pÃ¥ Internett med utvidelsen fra Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nl"],"name":"Kaspersky Bescherming","description":"Uw bescherming op het internet met de extensie van Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["pt-BR"],"name":"ProteÃ§Ã£o Kaspersky","description":"Sua proteÃ§Ã£o na Internet com a extensÃ£o da Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ru"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°Ñ‰Ð¸Ñ‚Ð° Ð² Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚Ðµ Ñ� Ñ€Ð°Ñ�ÑˆÐ¸Ñ€ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚ \\\"Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð¸Ð¸ ÐšÐ°Ñ�Ð¿ÐµÑ€Ñ�ÐºÐ¾Ð³Ð¾\\\"","creator":null,"homepageURL":null},{"locales":["sv"],"name":"Kaspersky Protection","description":"Ditt skydd pÃ¥ internet med tillÃ¤gg frÃ¥n Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["zh-Hans"],"name":"å�¡å·´æ–¯åŸºä¿�æŠ¤","description":"ä½¿ç”¨å�¡å·´æ–¯åŸºå®žéªŒå®¤çš„æ‰©å±•åŠŸèƒ½å¯¹æ‚¨çš„äº’è�”ç½‘çš„ä¿�æŠ¤ã€‚","creator":null,"homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"26.0","maxVersion":"30.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":-2}
+1455204403046	DeferredSave.extensions.json	DEBUG	Save changes
+1455204403046	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1455204403046	addons.xpi-utils	DEBUG	Updating add-on states
+1455204403050	addons.xpi-utils	DEBUG	Writing add-ons list
+1455204403108	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1455204403115	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 8.0.0.9103
+1455204403674	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1455204403675	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1455204403675	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1455204403675	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1455204403676	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1455204403677	addons.manager	DEBUG	Starting provider: GMPProvider
+1455204403718	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1455204403718	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1455204403719	addons.manager	DEBUG	Starting provider: PluginProvider
+1455204403719	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1455204403720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1455204403720	addons.manager	DEBUG	Completed startup sequence
+
 Build info: version: '2.50.1', revision: 'd7fc91b', time: '2016-01-29 19:04:49'
-System info: host: 'PHEGDE', ip: '192.168.0.100', os.name: 'Windows NT (unknown)', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_03'
-Driver info: driver.version: RemoteWebDriver
-Session ID: 99da2169-4a7b-43e2-a97f-a086d7fd4134
-Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, enablePersistentHover=true, ignoreZoomSetting=false, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=11, pageLoadStrategy=normal, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:11624/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
-	at automationFramework.MultiBrowser.afterTest(MultiBrowser.java:65)
+System info: host: 'PHEGDE', ip: '192.168.0.103', os.name: 'Windows NT (unknown)', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_03'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:134)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+	at automationFramework.MultiBrowser.beforeTest(MultiBrowser.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -51,8 +106,8 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:220)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
 	at org.testng.TestRunner.privateRun(TestRunner.java:774)
 	at org.testng.TestRunner.run(TestRunner.java:624)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
@@ -64,50 +119,48 @@ Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.IllegalStateException: UnixUtils may not be used on Windows
-	at org.openqa.selenium.os.ProcessUtils.getProcessId(ProcessUtils.java:189)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.getPID(UnixProcess.java:222)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$3(UnixProcess.java:221)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:132)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-	... 24 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+Lab","creator":null,"homepageURL":null},{"locales":["en"],"name":"Kaspersky Protection","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["es-MX"],"name":"Kaspersky Protection","description":"Su protecciÃ³n en Internet con la extensiÃ³n de Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["et"],"name":"Kaspersky Kaitse","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["fi"],"name":"Kaspersky Protection","description":"Suojauksesi InternetissÃ¤ kÃ¤yttÃ¤en Kaspersky Labin laajennusta","creator":null,"homepageURL":null},{"locales":["fr"],"name":"Kaspersky Protection","description":"Votre protection sur Internet avec l\\","creator":null,"homepageURL":null},{"locales":["hu"],"name":"Kaspersky vï¿½delem","description":"Your protection on the Internet with extension from Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ja"],"name":"ã‚«ã‚¹ãƒšãƒ«ã‚¹ã‚­ãƒ¼ ãƒ—ãƒ©ã‚°ã‚¤ãƒ³","description":"ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ�ãƒƒãƒˆã‚’å®‰å…¨ã�«ä½¿ç”¨ã�™ã‚‹ã�Ÿã‚�ã�® Kaspersky Lab ã�®æ‹¡å¼µæ©Ÿèƒ½","creator":null,"homepageURL":null},{"locales":["mk"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°ÑˆÑ‚Ð¸Ñ‚Ð° Ð½Ð° Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚ Ñ�Ð¾ Ð´Ð¾Ð´Ð°Ñ‚Ð¾Ðº Ð¾Ð´ Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nb"],"name":"Kaspersky Protection","description":"Din beskyttelse pÃ¥ Internett med utvidelsen fra Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["nl"],"name":"Kaspersky Bescherming","description":"Uw bescherming op het internet met de extensie van Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["pt-BR"],"name":"ProteÃ§Ã£o Kaspersky","description":"Sua proteÃ§Ã£o na Internet com a extensÃ£o da Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["ru"],"name":"Kaspersky Protection","description":"Ð’Ð°ÑˆÐ° Ð·Ð°Ñ‰Ð¸Ñ‚Ð° Ð² Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚Ðµ Ñ� Ñ€Ð°Ñ�ÑˆÐ¸Ñ€ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚ \\\"Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð¸Ð¸ ÐšÐ°Ñ�Ð¿ÐµÑ€Ñ�ÐºÐ¾Ð³Ð¾\\\"","creator":null,"homepageURL":null},{"locales":["sv"],"name":"Kaspersky Protection","description":"Ditt skydd pÃ¥ internet med tillÃ¤gg frÃ¥n Kaspersky Lab","creator":null,"homepageURL":null},{"locales":["zh-Hans"],"name":"å�¡å·´æ–¯åŸºä¿�æŠ¤","description":"ä½¿ç”¨å�¡å·´æ–¯åŸºå®žéªŒå®¤çš„æ‰©å±•åŠŸèƒ½å¯¹æ‚¨çš„äº’è�”ç½‘çš„ä¿�æŠ¤ã€‚","creator":null,"homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"26.0","maxVersion":"30.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":-2}
+1455204403046	DeferredSave.extensions.json	DEBUG	Save changes
+1455204403046	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1455204403046	addons.xpi-utils	DEBUG	Updating add-on states
+1455204403050	addons.xpi-utils	DEBUG	Writing add-ons list
+1455204403108	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1455204403115	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 8.0.0.9103
+1455204403674	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1455204403675	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1455204403675	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1455204403675	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1455204403676	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1455204403677	addons.manager	DEBUG	Starting provider: GMPProvider
+1455204403718	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1455204403718	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1455204403719	addons.manager	DEBUG	Starting provider: PluginProvider
+1455204403719	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1455204403720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1455204403720	addons.manager	DEBUG	Completed startup sequence
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:122)
+	... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- automationFramework.MultiBrowser -->
-    </test> <!-- IETest -->
-    <test name="FirefoxTest" duration-ms="18246" started-at="2016-02-05T16:19:15Z" finished-at="2016-02-05T16:19:33Z">
-      <class name="automationFramework.MultiBrowser">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@5fd0f0db]" name="beforeTest" is-config="true" duration-ms="13566" started-at="2016-02-05T21:49:15Z" finished-at="2016-02-05T21:49:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:automationFramework.MultiBrowser@5fd0f0db]" name="login" duration-ms="4184" started-at="2016-02-05T21:49:29Z" finished-at="2016-02-05T21:49:33Z">
+        <test-method status="SKIP" signature="login()[pri:0, instance:automationFramework.MultiBrowser@e74eb02]" name="login" duration-ms="2" started-at="2016-02-11T20:56:54Z" finished-at="2016-02-11T20:56:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@5fd0f0db]" name="afterTest" is-config="true" duration-ms="479" started-at="2016-02-05T21:49:33Z" finished-at="2016-02-05T21:49:33Z">
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@e74eb02]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-02-11T20:56:54Z" finished-at="2016-02-11T20:56:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- automationFramework.MultiBrowser -->
     </test> <!-- FirefoxTest -->
-    <test name="Chrome" duration-ms="24389" started-at="2016-02-05T16:19:15Z" finished-at="2016-02-05T16:19:39Z">
+    <test name="Chrome" duration-ms="61096" started-at="2016-02-11T15:26:02Z" finished-at="2016-02-11T15:27:03Z">
       <class name="automationFramework.MultiBrowser">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@4d560eeb]" name="beforeTest" is-config="true" duration-ms="21578" started-at="2016-02-05T21:49:15Z" finished-at="2016-02-05T21:49:37Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:automationFramework.MultiBrowser@4ced8df7]" name="beforeTest" is-config="true" duration-ms="55789" started-at="2016-02-11T20:56:02Z" finished-at="2016-02-11T20:56:58Z">
           <params>
             <param index="0">
               <value>
@@ -118,11 +171,11 @@ Caused by: java.lang.IllegalStateException: UnixUtils may not be used on Windows
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:automationFramework.MultiBrowser@4d560eeb]" name="login" duration-ms="1881" started-at="2016-02-05T21:49:37Z" finished-at="2016-02-05T21:49:38Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:automationFramework.MultiBrowser@4ced8df7]" name="login" duration-ms="3355" started-at="2016-02-11T20:56:58Z" finished-at="2016-02-11T20:57:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@4d560eeb]" name="afterTest" is-config="true" duration-ms="912" started-at="2016-02-05T21:49:38Z" finished-at="2016-02-05T21:49:39Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:automationFramework.MultiBrowser@4ced8df7]" name="afterTest" is-config="true" duration-ms="1829" started-at="2016-02-11T20:57:01Z" finished-at="2016-02-11T20:57:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
