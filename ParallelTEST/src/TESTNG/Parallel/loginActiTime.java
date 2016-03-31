@@ -2,7 +2,9 @@ package TESTNG.Parallel;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
- 
+ /* Author: Prasanna Hegde
+    Date : 31-Mar-2016
+ */
 public class loginActiTime extends TestBase{
 	Object obj = new Object();	
     @Test

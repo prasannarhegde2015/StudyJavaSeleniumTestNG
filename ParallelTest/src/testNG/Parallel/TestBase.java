@@ -11,7 +11,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
- 
+  /* Author: Prasanna Hegde
+    Date : 31-Mar-2016
+ */
 public class TestBase {
  
     protected ThreadLocal<RemoteWebDriver> threadDriver = null;

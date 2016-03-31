@@ -1,6 +1,8 @@
 package TESTNG.Parallel;
 
-
+ /* Author: Prasanna Hegde
+    Date : 31-Mar-2016
+ */
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

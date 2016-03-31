@@ -1,5 +1,7 @@
 package TESTNG.Parallel;
-
+ /* Author: Prasanna Hegde
+    Date : 31-Mar-2016
+ */
 import TESTNG.Parallel.Object;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
