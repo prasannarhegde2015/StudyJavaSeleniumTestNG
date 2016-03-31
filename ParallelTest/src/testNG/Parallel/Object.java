@@ -1,4 +1,5 @@
-package mypocFramework;
+package TESTNG.Parallel;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,29 +23,35 @@ import java.util.Map;
 
 import javax.swing.JOptionPane;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Object {
 
 	public enum controlTypeenum {
-		textbox, button, radiobutton, dropdown, link, frame, textarea, checkbox;
+		textbox, button, radiobutton, dropdown, link, frame, textarea, checkbox , webelem;
 	}
 
 	StringBuilder sb = new StringBuilder();
+
 	public int cntr = 1;
+	public int rptcntr = 1;
 
 	public WebElement getControl(WebDriver drv, controlTypeenum ct,
 			String locator, String localtorvalue, String index)
 			throws Exception {
 		WebElement getControl = null;
+		List<WebElement> allweblemscollection = null;
 		WebElement tempelem = null;
 		switch (locator.toLowerCase()) {
 		case "name": {
@@ -58,40 +65,40 @@ public class Object {
 				tempelem = null;
 			}
 			// Switch for individual control Types .............
-			if (tempelem != null)
-				switch (ct.toString().toLowerCase()) {
-				case "textbox":
-					if ((tempelem.getTagName().equalsIgnoreCase("input") && tempelem
-							.getAttribute("type").equalsIgnoreCase("text"))
-							|| (tempelem.getTagName().equalsIgnoreCase("input") && tempelem
-									.getAttribute("type").equalsIgnoreCase(
-											"password"))) {
-						getControl = tempelem;
-					}
-					break;
-				case "button":
-					if ((tempelem.getTagName().equalsIgnoreCase("input") && tempelem
-							.getAttribute("type").equalsIgnoreCase("button"))
-							|| (tempelem.getTagName().equalsIgnoreCase("input") && tempelem
-									.getAttribute("type").equalsIgnoreCase(
-											"submit"))) {
-						getControl = tempelem;
-					}
-					break;
-
-				default:
-					break;
-				}
+			getControl = CheckForControlType(tempelem, ct);
 
 			break;
 		}
 
 		case "id": {
-			getControl = drv.findElement(By.id(localtorvalue));
+			try {
+				tempelem = drv.findElement(By.id(localtorvalue));
+			} catch (StaleElementReferenceException e) {
+				tempelem = null;
+			} catch (NoSuchElementException e) {
+				tempelem = null;
+			} catch (Exception e) {
+				tempelem = null;
+			}
+			getControl = CheckForControlType(tempelem, ct);
 			break;
 		}
 		case "xpath": {
-			getControl = drv.findElement(By.xpath(localtorvalue));
+			WritetoLog("Trying to Find by Xpath..");
+			try 
+			{
+				tempelem = drv.findElement(By.xpath(localtorvalue));
+		    } catch (StaleElementReferenceException e) {
+		    	WritetoLog("Got Stale Eleemnt , elem not attached to page Exception");
+			tempelem = null;
+		    } catch (NoSuchElementException e) {
+			tempelem = null;
+			WritetoLog("Got No Such Element  Exception");
+		    } catch (Exception e) {
+		    	WritetoLog("Got Some other ... Exception");
+			tempelem = null;
+		    }
+			getControl = CheckForControlType(tempelem, ct);
 			break;
 		}
 		case "classname": {
@@ -110,7 +117,33 @@ public class Object {
 			getControl = drv.findElement(By.partialLinkText(localtorvalue));
 			break;
 		}
-
+		case "value": {
+			WritetoLog("Finding contol by new locator Value");
+			
+			allweblemscollection = drv.findElements(By.tagName("Input"));
+			WritetoLog("input tag colection count: "+allweblemscollection.size());
+			for ( WebElement indcntl:allweblemscollection)
+			{
+				 if (indcntl.getAttribute("value")!= null)
+                 {
+					 WritetoLog("Foudn elem with tagane input and attribute value ="+indcntl.getAttribute("value"));
+				if (indcntl.getAttribute("value").equalsIgnoreCase(localtorvalue) )
+				{
+					tempelem  = indcntl ;
+				}
+                 }
+				
+			}
+			
+			getControl = CheckForControlType(tempelem, ct);
+			break;
+		}
+		
+        default : 
+        {
+        WritetoLog("Invalid Locator Value Passed Vlaid are name,id ,xpath classname, cssselector, linktext partiallinktext...");
+           break;
+        }
 		}
 
 		return getControl;
@@ -131,20 +164,40 @@ public class Object {
 							+ "File Missing", JOptionPane.INFORMATION_MESSAGE);
 			return;
 		}
-		List<Map<String, String>> rsstructure = getResultSet(testDataPath
+		List<Map<String, String>> rsstructure = getResultSetPOI(testDataPath
 				+ fileName, "Structure", "", "");
-		List<Map<String, String>> rsData = getResultSet(
-				testDataPath + fileName, "Data", "testcase", testcase);
-		String controlType, searchBy, searchValue, index, fieldName, controlValue;
+
+		List<Map<String, String>> rsData = getResultSetPOI(testDataPath
+				+ fileName, "Data", "testcase", testcase);
+		WritetoLog("Number of rows in structure sheet: " + rsstructure.size());
+		WritetoLog("Number of rows in data sheet: " + rsData.size());
+		String controlType, searchBy, searchValue, fieldName, controlValue;
+		String index = null;
 		if (rsstructure != null && rsData != null) {
+			WritetoLog("starting Iteration.... ");
+			int ircount = 0;
+			int iracount = 1;
 			for (Map<String, String> irow : rsstructure) {
+				WritetoLog("Inside Iteration.... ");
+				WritetoLog("Iterating  row number dummy .... " + ircount);
+				if (ircount == 0) {
+					ircount++;
+					continue;
+				}
+				WritetoLog("Iterating  row number  Real.... " + iracount);
 				controlType = irow.get("controlType").toString();
+				WritetoLog("controltype value.... " + controlType);
 				searchBy = irow.get("searchBy").toString();
 				searchValue = irow.get("searchValue").toString();
-				index = irow.get("index").toString();
+				WritetoLog("Getting Index..");
+				if (irow.get("index") != null) {
+					index = irow.get("index").toString();
+				}
+				WritetoLog("Got Index..");
 				fieldName = irow.get("fieldName").toString();
+				WritetoLog("Gettting control name... ");
 				controlValue = rsData.get(0).get(fieldName).toString();
-
+				WritetoLog("Gettting control name... " + controlValue);
 				String cdetails = "Control Type : " + controlType
 						+ " FieldName: " + fieldName + " ControlLocator: "
 						+ searchBy + " Control Locator Value: " + searchValue
@@ -190,6 +243,21 @@ public class Object {
 				}
 
 				case "link": {
+					WritetoLog("Inside Link case....."
+							+ controlType.toLowerCase());
+					if (controlValue.length() > 0) {
+						WritetoLog("Trying to Find Control Link...");
+						if (getControl(drv, controlTypeenum.link, searchBy,
+								searchValue, index) != null) {
+							getControl(drv, controlTypeenum.link, searchBy,
+									searchValue, index).click();
+							WritetoLog("Succesfully Found and perfoemd action on  UI Control ==> :"
+									+ cdetails);
+						} else {
+							WritetoLog("Failed to Find and perfoemd action on  UI Control ==> :"
+									+ cdetails);
+						}
+					}
 					break;
 				}
 				case "dropdown": {
@@ -201,14 +269,35 @@ public class Object {
 				case "javascriptexecutor": {
 					break;
 				}
+				case "webelem" :
+				{
+					WritetoLog("Inside Generic Web elem....."
+							+ controlType.toLowerCase());
+					if (controlValue.length() > 0) {
+						WritetoLog("Trying to Find Web elem...");
+						if (getControl(drv, controlTypeenum.webelem, searchBy,
+								searchValue, index) != null) {
+							getControl(drv, controlTypeenum.webelem, searchBy,
+									searchValue, index).click();
+							WritetoLog("Succesfully Found and perfoemd action on  UI Control ==> :"
+									+ cdetails);
+						} else {
+							WritetoLog("Failed to Find and perfoemd action on  UI Control ==> :"
+									+ cdetails);
+						}
+					}
+					break;
+				}
 				default: {
-					WritetoLog("Invalid Control Type was entered in excel"
-							+ cntr);
+					WritetoLog("Invalid Control Type was entered in excel: "
+							+ controlType);
 					break;
 				}
 				}
 				WritetoLog("End of Row Number" + cntr);
 				cntr++;
+				iracount++;
+
 			}
 
 		} else
@@ -218,56 +307,6 @@ public class Object {
 		}
 
 	}
-
-	/*
-	 * public void AddDataPoi(String fileName,String testcase,WebDriver drv)
-	 * throws Exception {
-	 * 
-	 * HSSFSheet rsstructure = GetSheet(fileName, "structure"); HSSFSheet rsData
-	 * = GetSheet(fileName, "data"); for ( int i=1; i <
-	 * rsstructure.getLastRowNum();i++ ) { // String parentType =
-	 * rs.getString(getIndexonName(rsstructure, "parentType")); // String
-	 * parentSaerchby = rs.getString(getIndexonName(rsstructure,
-	 * "parentSaerchby")); // String parentSaerchValue =
-	 * rs.getString(getIndexonName(rsstructure, "parentSaerchValue")); String
-	 * controlType = rsstructure.getString(getIndexonName(rsstructure,
-	 * "controlType")); String searchBy =
-	 * rsstructure.getString(getIndexonName(rsstructure, "searchBy")); String
-	 * searchValue = rsstructure.getString(getIndexonName(rsstructure,
-	 * "searchValue")); String index =
-	 * rsstructure.getString(getIndexonName(rsstructure, "index")); // String
-	 * action = rs.getString(getIndexonName(rsstructure, "action ")); String
-	 * fieldName = rsstructure.getString(getIndexonName(rsstructure,
-	 * "fieldName")); String controlValue =
-	 * rsData.getString(getIndexonName(rsstructure, fieldName)); String cdetails
-	 * =
-	 * "Control Type : "+controlType+" FieldName: "+fieldName+" ControlLocator: "
-	 * +searchBy+" Control Locator Value: "+searchValue+" ControlData : "+
-	 * controlValue; switch(controlType.toLowerCase()) { case "textBox" :
-	 * 
-	 * { if (controlValue.length() > 0 ) { if
-	 * (getControl(drv,controlTypeenum.textbox,searchBy,searchValue,index) !=
-	 * null){
-	 * getControl(drv,controlTypeenum.textbox,searchBy,searchValue,index).
-	 * sendKeys(controlValue);
-	 * WritetoLog("Succesfully Found and perfoemd action on  UI Control ==> :" +
-	 * cdetails); } else {
-	 * WritetoLog("Failed to Find and perfoemd action on  UI Control ==> :" +
-	 * cdetails); } }
-	 * 
-	 * } case "button" : { if (controlValue.length() > 0 ) { if
-	 * (getControl(drv,controlTypeenum.button,searchBy,searchValue,index) !=
-	 * null){
-	 * getControl(drv,controlTypeenum.button,searchBy,searchValue,index).click
-	 * ();
-	 * WritetoLog("Successfully Found and performed action on  UI Control ==> :"
-	 * + cdetails); } else {
-	 * WritetoLog("Failed to Find and performed action on  UI Control ==> :" +
-	 * cdetails); } } break; }
-	 * 
-	 * case "link" : { break; } case "dropdown" : { break; } case "radiobutton"
-	 * : { break; } case "javascriptexecutor" : { break; } } }
-	 */
 
 	public static int getIndexonName(ResultSet r1, String colName) {
 		int Colindex = 0;
@@ -359,53 +398,117 @@ public class Object {
 
 	{
 		List<Map<String, String>> resultList = new ArrayList<Map<String, String>>();
-		WritetoLog("Inside Add Data");
+	//	WritetoLog("Inside getResultSetPOI:");
 		FileInputStream filexls = null;
+		HSSFWorkbook workbook = null;
 		try {
-			WritetoLog("Inside Try ");
-			// ..
+		//	WritetoLog("Inside Try ");
+		//	WritetoLog("File path: " + file);
+		//	// ..
 			filexls = new FileInputStream(new File(file));
 			// Get the workbook instance for XLS file
-			HSSFWorkbook workbook = new HSSFWorkbook(filexls);
+			workbook = new HSSFWorkbook(filexls);
+
 			// Get first sheet from the workbook
 			HSSFSheet retsheet = workbook.getSheet(sheet);
 			// Get iterator to all the rows in current sheet
 			Iterator<Row> rowIterator = retsheet.iterator();
 			Integer rownum = 0;
-
-			String columnName = "";
-			while (rowIterator.hasNext()) {
-				Row indrow = rowIterator.next();
+			if (colname.length() > 0 && colvalue.length() > 0) {
+				//WritetoLog("Inside Filter Case for Colname" + colname
+				//		+ " and clovalue " + colvalue);
+				String columnName = "";
 				Map<String, String> row = null;
-				row = new HashMap<String, String>();
-				// For each row, iterate through each columns
-				Iterator<Cell> cellIterator = indrow.cellIterator();
-				Integer colnum = 1;
 				ArrayList<String> colnamelist = new ArrayList<String>();
-				while (cellIterator.hasNext()) {
-					Cell cell = cellIterator.next();
+				while (rowIterator.hasNext()) {
+					WritetoLog("Row number: " + rownum);
+					Row indrow = rowIterator.next();
 					row = new HashMap<String, String>();
-					if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
+					// For each row, iterate through each columns
+					Iterator<Cell> cellIterator = indrow.cellIterator();
+					Integer colnum = 0;
+					while (cellIterator.hasNext()) {
+						Cell cell = cellIterator.next();
+						// row = new HashMap<String, String>();
+						if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
 
-						String value = cell.getStringCellValue();
-						if (rownum == 0) {
-							columnName = value;
-							colnamelist.add(colnum, columnName);
+							String value = cell.getStringCellValue();
+							//WritetoLog("got cell value as " + value);
+							if (rownum == 0) {
+								columnName = value;
+								colnamelist.add(colnum, columnName);
+							} else {
+
+								row.put(colnamelist.get(colnum), value);
+
+							}
+						}
+						colnum++;
+					}
+				//	WritetoLog("Checking if Row to be added or not ");
+				//	WritetoLog("Column name " + colname + " column value "
+				//			+ colvalue);
+					// if (row.containsKey(colname)
+					// && row.get(colname) == colvalue) {
+				//	WritetoLog("Value from Dictionany or hashmap was"
+				//			+ row.get(colname));
+					if (row.get(colname) != null) {
+						if (row.get(colname).equalsIgnoreCase(colvalue)) {
+							//WritetoLog("Adding ..row with Column name "
+							//		+ colname + " column value " + colvalue);
+							resultList.add(row);
 						} else {
-
-							row.put(colnamelist.get(colnum), value);
-
+							/*WritetoLog("Nothing was added as row containes  "
+									+ colname + " is  "
+									+ row.containsKey(colname)
+									+ "and row cotnain colval " + colvalue
+									+ " is " + (row.get(colname) == colvalue)); */
 						}
 					}
-					colnum++;
+					rownum++;
 				}
-				resultList.add(row);
+			} else {
+				//WritetoLog("Inside  Case for Full record set records unfiltered ");
+				String columnName = "";
+				ArrayList<String> colnamelist = new ArrayList<String>();
+				Map<String, String> row = null;
+				while (rowIterator.hasNext()) {
+					//WritetoLog("Row number: " + rownum);
+					Row indrow = rowIterator.next();
+					row = new HashMap<String, String>();
+					// For each row, iterate through each columns
+					Iterator<Cell> cellIterator = indrow.cellIterator();
+					Integer colnum = 0;
+
+					while (cellIterator.hasNext()) {
+						WritetoLog("Column number: " + colnum);
+						Cell cell = cellIterator.next();
+						// row = new HashMap<String, String>();
+						if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
+
+							String value = cell.getStringCellValue();
+							//WritetoLog("got cell value as " + value);
+							if (rownum == 0) {
+								columnName = value;
+								colnamelist.add(colnum, columnName);
+								row.put(colnamelist.get(colnum), value);
+							} else {
+
+								row.put(colnamelist.get(colnum), value);
+
+							}
+						}
+						colnum++;
+					}
+					resultList.add(row);
+					rownum++;
+				}
 			}
 			// Get iterator to all cells of current row
 
-			WritetoLog("outsude record set");
+		//	WritetoLog("outsude record set");
 
-			WritetoLog("retuned record set in form of List ");
+			WritetoLog("returned record set in form of List.. ");
 			return resultList;
 		}
 
@@ -415,6 +518,7 @@ public class Object {
 		} finally {
 			try {
 				filexls.close();
+			//	workbook.close();
 				return resultList;
 			} catch (Exception e) {
 				System.err.println(e);
@@ -485,7 +589,7 @@ public class Object {
 			sb.append("<td><font color='red' >Fail</td>");
 		}
 		sb.append("</tr>");
-		cntr++;
+		rptcntr++;
 
 	}
 
@@ -556,5 +660,88 @@ public class Object {
 			// return streeamlength;
 		}
 		return streeamlength;
+	}
+	
+	
+	public void captureScreenShot(WebDriver drv,String strscreenname) throws IOException
+	{
+		 File scrFile = ((TakesScreenshot)drv).getScreenshotAs(OutputType.FILE);
+	        // Now you can do whatever you need to do with it, for example copy somewhere
+	        File resimfile = new File("c:\\tmp\\"+strscreenname+getCurrentTimeStamp()+".png");
+	        if( resimfile.exists() == true)
+	        {
+	        	WritetoLog("Deleting img file..whose time stamp is "+ new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss").format(new Date(resimfile.lastModified())) );
+	        	resimfile.delete();
+	        	WritetoLog("Deleted  old copy of img file..");
+	        }
+	        else
+	        	
+	        {
+	        	WritetoLog("File was not exisitng before ");
+	        }
+	        WritetoLog("File still is there ? before copy Expected [False]: "+resimfile.exists());
+	        FileUtils.copyFile(scrFile, resimfile);
+	        WritetoLog(String.format("File still is there ? : after copy Expected [True] %s and Modfuied Date %s: ",resimfile.exists(),new SimpleDateFormat("dd-MMM-yyyy HH-mm-ss").format(new Date(resimfile.lastModified()))));
+	}
+	
+	public void VerifyTextPresentonPage(WebDriver drv , String testcaseid , String testcasestep, String fieldNametocheck ,String texttoVrify) throws IOException
+	{
+		  if (drv.getPageSource().contains(texttoVrify))
+          {
+       	     
+       	   WritetoLog("test has passed");
+       	   WritetHTMLRow( Integer.toString(cntr), testcaseid, testcasestep,fieldNametocheck,texttoVrify,texttoVrify);
+       	}
+          else
+          {
+       	   WritetHTMLRow( Integer.toString(cntr), testcaseid ,testcasestep ,fieldNametocheck,texttoVrify," Expected Text not found");
+       	   WritetoLog("test has failed");
+          }
+	}
+
+	public String getCurrentTimeStamp() {
+	    SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy HH_mm_ss");
+	    Date now = new Date();
+	    String strDate = sdfDate.format(now);
+	    return strDate;
+	}
+
+	
+	public WebElement CheckForControlType(WebElement elem , controlTypeenum ct)
+	{
+		WebElement CheckForControlType = null;
+			if (elem != null)
+			{
+		
+					switch (ct.toString().toLowerCase()) 
+		{
+					case "textbox":
+						if ((elem.getTagName().equalsIgnoreCase("input") && elem
+								.getAttribute("type").equalsIgnoreCase("text"))
+								|| (elem.getTagName().equalsIgnoreCase("input") && elem
+										.getAttribute("type").equalsIgnoreCase(
+												"password"))) {
+							CheckForControlType = elem;
+						}
+						break;
+					case "button":
+						if ((elem.getTagName().equalsIgnoreCase("input") && elem
+								.getAttribute("type").equalsIgnoreCase("button"))
+								|| (elem.getTagName().equalsIgnoreCase("input") && elem
+										.getAttribute("type").equalsIgnoreCase(
+												"submit"))) {
+							CheckForControlType = elem;
+						}
+						break;
+					case "webelem" :
+					{
+						CheckForControlType = elem;
+						break;
+					}
+					default:
+						break;
+					}
+		}
+			return CheckForControlType ;
 	}
 }
