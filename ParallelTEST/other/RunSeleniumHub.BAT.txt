@@ -1,0 +1,1 @@
+java -jar "E:\AllSetupFiles\QA automation\selenium-java-2.48.2\selenium-server-standalone-2.49.0.jar" -role hub 
