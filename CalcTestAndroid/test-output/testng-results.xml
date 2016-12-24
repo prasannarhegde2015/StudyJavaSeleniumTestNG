@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20254" started-at="2016-05-01T17:23:13Z" finished-at="2016-05-01T17:23:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20254" started-at="2016-05-01T17:23:13Z" finished-at="2016-05-01T17:23:34Z">
+      <class name="Android.SimpleAndroidCalcTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Android.SimpleAndroidCalcTest@5ba71e88]" name="setUp" is-config="true" duration-ms="13204" started-at="2016-05-01T22:53:13Z" finished-at="2016-05-01T22:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Sum()[pri:0, instance:Android.SimpleAndroidCalcTest@5ba71e88]" name="Sum" duration-ms="5124" started-at="2016-05-01T22:53:27Z" finished-at="2016-05-01T22:53:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Sum -->
+        <test-method status="PASS" signature="End()[pri:0, instance:Android.SimpleAndroidCalcTest@5ba71e88]" name="End" is-config="true" duration-ms="1864" started-at="2016-05-01T22:53:32Z" finished-at="2016-05-01T22:53:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End -->
+      </class> <!-- Android.SimpleAndroidCalcTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,539 @@
+<Results>
+    <GeneralInfo>
+        <Name/>
+        <RunStartTime>2016-04-23 23:03:25.525</RunStartTime>
+        <Timezone>India Standard Time</Timezone>
+        <OrchestrationToolName>JUnit</OrchestrationToolName>
+        <OrchestrationToolVersion/>
+        <ReportTitle>LeanFT Report</ReportTitle>
+    </GeneralInfo>
+    <ReportNode type="Run">
+        <Data>
+            <Name>Run Results</Name>
+            <Description><![CDATA[ ]]></Description>
+            <StartTime>2016-04-23 23:03:25.525</StartTime>
+            <Result>Passed</Result>
+            <Links/>
+            <Duration>15</Duration>
+            <Extension>
+                <Any>
+                    <IconKey>Run</IconKey>
+                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                </Any>
+            </Extension>
+            <Environment>
+                <OSInfo>Microsoft Windows NT 6.2.9200.0</OSInfo>
+                <HostName>PHEGDE</HostName>
+                <NumberOfCores>4</NumberOfCores>
+                <CpuInfo/>
+                <TotalMemory>4077</TotalMemory>
+                <Locale>en-US</Locale>
+                <Timezone>India Standard Time</Timezone>
+                <User>SONY</User>
+            </Environment>
+            <TestedApplication/>
+            <ToolName>LeanFT</ToolName>
+        </Data>
+        <ReportNode type="Step">
+            <Data>
+                <Name>Browser.launch</Name>
+                <Description><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;CHROME&quot;</td></tr></table>]]></Description>
+                <StartTime>2016-04-23 23:03:25.681</StartTime>
+                <Result>Passed</Result>
+                <Links/>
+                <Duration>0</Duration>
+                <Extension>
+                    <Any>
+                        <TestObject>
+                            <Path/>
+                            <Operation>launch</Operation>
+                            <OperationData><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;CHROME&quot;</td></tr></table>]]></OperationData>
+                            <Properties/>
+                        </TestObject>
+                        <IsHtmlErrorText>true</IsHtmlErrorText>
+                        <IconKey>Browser</IconKey>
+                        <CustomUIElements>
+                            <DescriptionLabel>Data</DescriptionLabel>
+                            <FlowTreeNodeCaption>Browser.&lt;span class='emphasis'&gt;launch("Chrome")&lt;/span&gt;</FlowTreeNodeCaption>
+                            <FlowTreeNodeTooltip>Browser.launch("Chrome")</FlowTreeNodeTooltip>
+                        </CustomUIElements>
+                        <HideContextInfo>true</HideContextInfo>
+                    </Any>
+                </Extension>
+            </Data>
+        </ReportNode>
+        <ReportNode type="Context">
+            <Data>
+                <Name>Web.Browser.Browser</Name>
+                <Description/>
+                <StartTime>2016-04-23 23:03:34.515</StartTime>
+                <Result>Passed</Result>
+                <Links/>
+                <Duration>5</Duration>
+                <Extension>
+                    <Any>
+                        <TestObject>
+                            <Path>
+                                <Object>
+                                    <Type>Web.Browser</Type>
+                                    <Name><![CDATA[Browser]]></Name>
+                                </Object>
+                            </Path>
+                            <Operation/>
+                            <OperationData/>
+                            <Properties/>
+                        </TestObject>
+                        <IsHtmlErrorText>true</IsHtmlErrorText>
+                        <IconKey>Browser</IconKey>
+                        <CustomUIElements>
+                            <DescriptionLabel>Data</DescriptionLabel>
+                        </CustomUIElements>
+                        <HideContextInfo>true</HideContextInfo>
+                    </Any>
+                </Extension>
+            </Data>
+            <ReportNode type="Step">
+                <Data>
+                    <Name>Browser.navigate</Name>
+                    <Description><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;http://newtours.demoaut.com&quot;</td></tr></table>]]></Description>
+                    <StartTime>2016-04-23 23:03:33.007</StartTime>
+                    <Result>Passed</Result>
+                    <Links/>
+                    <Duration>2</Duration>
+                    <Extension>
+                        <Any>
+                            <TestObject>
+                                <Path>
+                                    <Object>
+                                        <Type>Web.Browser</Type>
+                                        <Name><![CDATA[Browser]]></Name>
+                                    </Object>
+                                </Path>
+                                <Operation>navigate</Operation>
+                                <OperationData><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;http://newtours.demoaut.com&quot;</td></tr></table>]]></OperationData>
+                                <Properties>
+                                    <Property>
+                                        <Name><![CDATA[Type]]></Name>
+                                        <Value><![CDATA[Chrome]]></Value>
+                                    </Property>
+                                    <Property>
+                                        <Name><![CDATA[Version]]></Name>
+                                        <Value><![CDATA[49.0]]></Value>
+                                    </Property>
+                                </Properties>
+                            </TestObject>
+                            <IsHtmlErrorText>true</IsHtmlErrorText>
+                            <IconKey>Browser</IconKey>
+                            <CustomUIElements>
+                                <DescriptionLabel>Data</DescriptionLabel>
+                            </CustomUIElements>
+                            <Descriptive>
+                                <TestObject>
+                                    <Path>
+                                        <Object>
+                                            <Type>Web.Browser</Type>
+                                            <Name><![CDATA[Browser]]></Name>
+                                            <IconKey>Browser</IconKey>
+                                        </Object>
+                                    </Path>
+                                </TestObject>
+                            </Descriptive>
+                            <HideContextInfo>true</HideContextInfo>
+                        </Any>
+                    </Extension>
+                </Data>
+            </ReportNode>
+        </ReportNode>
+        <ReportNode type="Context">
+            <Data>
+                <Name>Web.Browser.Welcome: Mercury Tours</Name>
+                <Description/>
+                <StartTime>2016-04-23 23:03:38.811</StartTime>
+                <Result>Passed</Result>
+                <Links/>
+                <Duration>1</Duration>
+                <Extension>
+                    <Any>
+                        <TestObject>
+                            <Path>
+                                <Object>
+                                    <Type>Web.Browser</Type>
+                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                </Object>
+                            </Path>
+                            <Operation/>
+                            <OperationData/>
+                            <Properties/>
+                        </TestObject>
+                        <IsHtmlErrorText>true</IsHtmlErrorText>
+                        <IconKey>Browser</IconKey>
+                        <CustomUIElements>
+                            <DescriptionLabel>Data</DescriptionLabel>
+                        </CustomUIElements>
+                        <HideContextInfo>true</HideContextInfo>
+                    </Any>
+                </Extension>
+            </Data>
+            <ReportNode type="Context">
+                <Data>
+                    <Name>Web.Page.Welcome: Mercury Tours</Name>
+                    <Description/>
+                    <StartTime>2016-04-23 23:03:38.811</StartTime>
+                    <Result>Passed</Result>
+                    <Links/>
+                    <Duration>1</Duration>
+                    <Extension>
+                        <Any>
+                            <TestObject>
+                                <Path>
+                                    <Object>
+                                        <Type>Web.Browser</Type>
+                                        <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                    </Object>
+                                    <Object>
+                                        <Type>Web.Page</Type>
+                                        <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                    </Object>
+                                </Path>
+                                <Operation/>
+                                <OperationData/>
+                                <Properties/>
+                            </TestObject>
+                            <IsHtmlErrorText>true</IsHtmlErrorText>
+                            <IconKey>Page</IconKey>
+                            <CustomUIElements>
+                                <DescriptionLabel>Data</DescriptionLabel>
+                            </CustomUIElements>
+                            <HideContextInfo>true</HideContextInfo>
+                        </Any>
+                    </Extension>
+                </Data>
+                <ReportNode type="Context">
+                    <Data>
+                        <Name>Web.EditField.userName</Name>
+                        <Description/>
+                        <StartTime>2016-04-23 23:03:38.811</StartTime>
+                        <Result>Passed</Result>
+                        <Links/>
+                        <Duration>1</Duration>
+                        <Extension>
+                            <Any>
+                                <TestObject>
+                                    <Path>
+                                        <Object>
+                                            <Type>Web.Browser</Type>
+                                            <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                        </Object>
+                                        <Object>
+                                            <Type>Web.Page</Type>
+                                            <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                        </Object>
+                                        <Object>
+                                            <Type>Web.EditField</Type>
+                                            <Name><![CDATA[userName]]></Name>
+                                        </Object>
+                                    </Path>
+                                    <Operation/>
+                                    <OperationData/>
+                                    <Properties/>
+                                </TestObject>
+                                <IsHtmlErrorText>true</IsHtmlErrorText>
+                                <IconKey>EditField</IconKey>
+                                <CustomUIElements>
+                                    <DescriptionLabel>Data</DescriptionLabel>
+                                </CustomUIElements>
+                                <HideContextInfo>true</HideContextInfo>
+                            </Any>
+                        </Extension>
+                    </Data>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>userName.setValue</Name>
+                            <Description><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;test&quot;</td></tr></table>]]></Description>
+                            <StartTime>2016-04-23 23:03:34.521</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>5</Duration>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Web.Browser</Type>
+                                                <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Web.Page</Type>
+                                                <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Web.EditField</Type>
+                                                <Name><![CDATA[userName]]></Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>setValue</Operation>
+                                        <OperationData><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;test&quot;</td></tr></table>]]></OperationData>
+                                        <Properties>
+                                            <Property>
+                                                <Name><![CDATA[XPath]]></Name>
+                                                <Value><![CDATA[//input[@name='userName']]]></Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>EditField</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Web.Browser</Type>
+                                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                                    <IconKey>Browser</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Web.Page</Type>
+                                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                                    <IconKey>Page</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Web.EditField</Type>
+                                                    <Name><![CDATA[userName]]></Name>
+                                                    <IconKey>EditField</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                </ReportNode>
+            </ReportNode>
+        </ReportNode>
+        <ReportNode type="Context">
+            <Data>
+                <Name>Web.Browser.Welcome: Mercury Tours</Name>
+                <Description/>
+                <StartTime>2016-04-23 23:03:38.967</StartTime>
+                <Result>Passed</Result>
+                <Links/>
+                <Duration>1</Duration>
+                <Extension>
+                    <Any>
+                        <TestObject>
+                            <Path>
+                                <Object>
+                                    <Type>Web.Browser</Type>
+                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                </Object>
+                            </Path>
+                            <Operation/>
+                            <OperationData/>
+                            <Properties/>
+                        </TestObject>
+                        <IsHtmlErrorText>true</IsHtmlErrorText>
+                        <IconKey>Browser</IconKey>
+                        <CustomUIElements>
+                            <DescriptionLabel>Data</DescriptionLabel>
+                        </CustomUIElements>
+                        <HideContextInfo>true</HideContextInfo>
+                    </Any>
+                </Extension>
+            </Data>
+            <ReportNode type="Context">
+                <Data>
+                    <Name>Web.Page.Welcome: Mercury Tours</Name>
+                    <Description/>
+                    <StartTime>2016-04-23 23:03:38.963</StartTime>
+                    <Result>Passed</Result>
+                    <Links/>
+                    <Duration>1</Duration>
+                    <Extension>
+                        <Any>
+                            <TestObject>
+                                <Path>
+                                    <Object>
+                                        <Type>Web.Browser</Type>
+                                        <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                    </Object>
+                                    <Object>
+                                        <Type>Web.Page</Type>
+                                        <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                    </Object>
+                                </Path>
+                                <Operation/>
+                                <OperationData/>
+                                <Properties/>
+                            </TestObject>
+                            <IsHtmlErrorText>true</IsHtmlErrorText>
+                            <IconKey>Page</IconKey>
+                            <CustomUIElements>
+                                <DescriptionLabel>Data</DescriptionLabel>
+                            </CustomUIElements>
+                            <HideContextInfo>true</HideContextInfo>
+                        </Any>
+                    </Extension>
+                </Data>
+                <ReportNode type="Context">
+                    <Data>
+                        <Name>Web.EditField.password</Name>
+                        <Description/>
+                        <StartTime>2016-04-23 23:03:38.963</StartTime>
+                        <Result>Passed</Result>
+                        <Links/>
+                        <Duration>1</Duration>
+                        <Extension>
+                            <Any>
+                                <TestObject>
+                                    <Path>
+                                        <Object>
+                                            <Type>Web.Browser</Type>
+                                            <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                        </Object>
+                                        <Object>
+                                            <Type>Web.Page</Type>
+                                            <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                        </Object>
+                                        <Object>
+                                            <Type>Web.EditField</Type>
+                                            <Name><![CDATA[password]]></Name>
+                                        </Object>
+                                    </Path>
+                                    <Operation/>
+                                    <OperationData/>
+                                    <Properties/>
+                                </TestObject>
+                                <IsHtmlErrorText>true</IsHtmlErrorText>
+                                <IconKey>EditField</IconKey>
+                                <CustomUIElements>
+                                    <DescriptionLabel>Data</DescriptionLabel>
+                                </CustomUIElements>
+                                <HideContextInfo>true</HideContextInfo>
+                            </Any>
+                        </Extension>
+                    </Data>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>password.setValue</Name>
+                            <Description><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;test&quot;</td></tr></table>]]></Description>
+                            <StartTime>2016-04-23 23:03:38.811</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>1</Duration>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Web.Browser</Type>
+                                                <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Web.Page</Type>
+                                                <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Web.EditField</Type>
+                                                <Name><![CDATA[password]]></Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>setValue</Operation>
+                                        <OperationData><![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>&quot;test&quot;</td></tr></table>]]></OperationData>
+                                        <Properties>
+                                            <Property>
+                                                <Name><![CDATA[XPath]]></Name>
+                                                <Value><![CDATA[//input[@name='password']]]></Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>EditField</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Web.Browser</Type>
+                                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                                    <IconKey>Browser</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Web.Page</Type>
+                                                    <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                                    <IconKey>Page</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Web.EditField</Type>
+                                                    <Name><![CDATA[password]]></Name>
+                                                    <IconKey>EditField</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                </ReportNode>
+            </ReportNode>
+            <ReportNode type="Step">
+                <Data>
+                    <Name>Welcome: Mercury Tours.close</Name>
+                    <Description/>
+                    <StartTime>2016-04-23 23:03:38.967</StartTime>
+                    <Result>Passed</Result>
+                    <Links/>
+                    <Duration>1</Duration>
+                    <Extension>
+                        <Any>
+                            <TestObject>
+                                <Path>
+                                    <Object>
+                                        <Type>Web.Browser</Type>
+                                        <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                    </Object>
+                                </Path>
+                                <Operation>close</Operation>
+                                <OperationData/>
+                                <Properties>
+                                    <Property>
+                                        <Name><![CDATA[Type]]></Name>
+                                        <Value><![CDATA[Chrome]]></Value>
+                                    </Property>
+                                    <Property>
+                                        <Name><![CDATA[Version]]></Name>
+                                        <Value><![CDATA[49.0]]></Value>
+                                    </Property>
+                                </Properties>
+                            </TestObject>
+                            <IsHtmlErrorText>true</IsHtmlErrorText>
+                            <IconKey>Browser</IconKey>
+                            <CustomUIElements>
+                                <DescriptionLabel>Data</DescriptionLabel>
+                            </CustomUIElements>
+                            <Descriptive>
+                                <TestObject>
+                                    <Path>
+                                        <Object>
+                                            <Type>Web.Browser</Type>
+                                            <Name><![CDATA[Welcome: Mercury Tours]]></Name>
+                                            <IconKey>Browser</IconKey>
+                                        </Object>
+                                    </Path>
+                                </TestObject>
+                            </Descriptive>
+                            <HideContextInfo>true</HideContextInfo>
+                        </Any>
+                    </Extension>
+                </Data>
+            </ReportNode>
+        </ReportNode>
+    </ReportNode>
+</Results>

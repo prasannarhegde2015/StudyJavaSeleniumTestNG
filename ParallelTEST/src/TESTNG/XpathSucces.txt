@@ -1,0 +1,18 @@
+//div[text()="Mailing Address"]/../../descendant::span[text()="State"]/../following-sibling::*[1]/*[2]/*[2]]
+
+(//span[text()="State"]/../following-sibling::*[1]/*[2]/*[2])[1]
+
+
+  Grooup Box ==  ((//div[text()="Mailing Address"]/..)/..)----------> Works
+
+//span[text()="State"]/../following-sibling::*[1]/*[2]/*[2]]
+
+Control ===  span[text()="State"]/../following-sibling::*[1]/*[2]/*[2]
+
+
+Control to be found inside a given Group Box  ( descendent of that group box only)
+
+((//div[text()="Mailing Address"]/..)/..)/descendant::span[text()="State"]/../following-sibling::*[1]/*[2]/*[2]  ------ > Super Working
+
+
+//span[text()="Expiration"]/../following-sibling::*[1]/descendant::div[contains(@id,'trigger-picker')]  ---- use of decendtants and contians
