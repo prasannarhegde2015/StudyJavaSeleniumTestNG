@@ -1,0 +1,9 @@
+#updated with: xpath://span[text()="Prasanna"]
+#Thu Nov 17 19:09:37 IST 2016
+lnksignin=xpath\://button[contains(text(),"Log in")]
+txtpassword=name\:passwd
+btnsignin=xpath\://button[contains(text(),"Sign in")]
+txtpasssword2=name\:Password
+btnSignin2=xpath\://span[contains(text(),"Sign in")]
+txtusername=name\:login
+fname=xpath\://span[text()\="Prasanna"]
