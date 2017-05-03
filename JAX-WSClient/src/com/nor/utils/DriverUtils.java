@@ -45,6 +45,11 @@ public class DriverUtils {
 				System.setProperty("webdriver.chrome.driver", CHROMEdriverpath);
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("chrome.switches","--disable-extensions");
+				options.addArguments("chrome.switches","--disable-infobars");
+				Map<String, Object> prefs = new HashMap<String, Object>();
+	    			prefs.put("credentials_enable_service", false);
+	    			prefs.put("profile.password_manager_enabled", false);
+	    			options.setExperimentalOption("prefs", prefs);
 				globalDriver= new ChromeDriver(options);
 				globalDriver.manage().window().maximize();
 				globalDriver.get(baseurl);
